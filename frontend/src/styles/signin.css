@@ -1,0 +1,155 @@
+/* Page container */
+.signin-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #0a0a0a; /* background color */
+  padding: 20px;
+}
+
+/* Navbar color match ke liye (use same as page) */
+.navbar-black {
+  background-color: #0a0a0a !important; /* same as signin-page background */
+}
+
+/* Header outside card */
+.signin-header {
+  text-align: center;
+  color: white;
+}
+
+.signin-logo {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00f6ff, #ff00c8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.signin-header h2 {
+  margin-bottom: 6px;
+}
+
+.signin-header p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Card only for inputs and button */
+.signin-card {
+  width: 360px;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 0 40px rgba(0, 246, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+/* Input group */
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-icon-wrapper {
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 14px 14px 14px 40px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #f0f4f8;
+  font-size: 16px;
+}
+
+/* Floating label */
+label {
+  position: absolute;
+  left: 40px;
+  top: 14px;
+  color: #999;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+input:focus + label,
+.input-group.filled label {
+  top: -8px;
+  font-size: 12px;
+  color: #00f6ff;
+}
+
+/* Icon inside input */
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #00f6ff;
+  user-select: none;
+}
+
+/* Forgot password */
+.forgot {
+  font-size: 12px;
+  color: #00f6ff;
+  cursor: pointer;
+  display: block;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+/* Sign In button */
+.signin-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #00f6ff, #ff00c8);
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  transition: box-shadow 0.3s ease;
+}
+
+.signin-btn:hover {
+  box-shadow: 0 0 20px #ff00c8;
+}
+
+/* Signup text outside card */
+.signup-text {
+  color: white;
+  font-size: 13px;
+}
+
+.signup-text span {
+  color: #00f6ff;
+  cursor: pointer;
+}
+
+/* =========================
+   NEW: REACT ICON SUPPORT
+========================= */
+.input-icon svg {
+  font-size: 18px;   /* emoji ke size jaisa */
+  color: #00f6ff;    /* same theme color */
+}
+
+/* focus pe thoda premium glow */
+.input-icon-wrapper:focus-within .input-icon svg {
+  filter: drop-shadow(0 0 6px #00f6ff);
+}

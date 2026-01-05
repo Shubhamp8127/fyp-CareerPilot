@@ -1,0 +1,193 @@
+/* ===== CARD GRID CONTAINER ===== */
+.college-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch; /* cards height align ho jayenge */
+}
+
+/* ===== CARD ===== */
+.college-card {
+  background: #11162a;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(34, 242, 255, 0.25);
+  color: #fff;
+
+  min-height: 380px; /* natural min height */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.college-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(34, 242, 255, 0.45);
+}
+
+/* ===== TOP ===== */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heart-icon {
+  cursor: pointer;
+  color: #aaa;
+}
+
+.heart-icon:hover {
+  color: #ff0080;
+}
+
+/* ===== LOCATION ===== */
+.location {
+  color: #aaa;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ===== META ===== */
+.meta {
+  display: flex;
+  gap: 10px;
+  font-size: 0.85rem;
+  align-items: center;
+}
+
+.badge {
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+
+.badge.government {
+  background: linear-gradient(90deg, #00f0ff, #22f2ff);
+  color: #000;
+}
+
+.badge.private {
+  background: linear-gradient(90deg, #ff0080, #ff00ff);
+  color: #fff;
+}
+
+.rating {
+  color: #ffd700;
+}
+
+.est {
+  color: #aaa;
+  font-size: 0.75rem;
+}
+
+/* ===== STATS ===== */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+}
+
+.label {
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+.value {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #22f2ff;
+}
+
+.cutoff {
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #ff0099;
+}
+
+/* ===== COURSES ===== */
+.courses {
+  margin-top: 8px;
+  margin-bottom: 0; /* spacing remove for buttons alignment */
+}
+
+.course-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.course-tags span {
+  background: #1a1f38;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+/* ===== ACTIONS ===== */
+.actions {
+  display: flex;
+  gap: 8px;
+  margin-top: auto; /* push buttons to bottom */
+}
+
+.actions button {
+  flex: 1;
+  padding: 7px 0;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  margin: 0; /* remove any default margin */
+}
+
+/* ===== BUTTONS ===== */
+.link {
+  background: #22f2ff;
+  color: #000;
+}
+
+.link:hover {
+  background: #1bb1c9;
+}
+
+.visit {
+  background: linear-gradient(90deg, #00f0ff, #ff00ff);
+  color: #000;
+}
+
+.visit:hover {
+  opacity: 0.85;
+}
+
+.compare {
+  background: #ff0080;
+  color: #fff;
+}
+
+.compare:hover {
+  opacity: 0.85;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .college-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .college-grid {
+    grid-template-columns: 1fr;
+  }
+}
